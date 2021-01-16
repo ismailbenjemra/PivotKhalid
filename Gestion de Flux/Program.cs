@@ -18,7 +18,7 @@ namespace Gestion_de_Flux
             // the app is starting here
             AutoMapperInitializer.Initialize();
 
-            var listeCommandes = GetCommandsFromFile(@"C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Fluuux\PRDG_ADS_SANTE_210108.csv");
+            var listeCommandes = GetCommandsFromFile(@"C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Fluuux\PRDG_ADS_SANTE_210108.csv");
 
             //Executer le traitement de verification 
 
