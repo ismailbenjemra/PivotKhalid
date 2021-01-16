@@ -16,52 +16,50 @@ namespace Gestion_de_Flux
         static void Main(string[] args)
         {
             // the app is starting here
-            InitializeAutomapper();
+            AutoMapperInitializer.Initialize();
 
-            //recuperation du fichier sans header avec separateur ";"
-            CsvParserOptions csvParserOptions = new CsvParserOptions(false,';');
+            var listeCommandes = GetCommandsFromFile(@"C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Fluuux\PRDG_ADS_SANTE_210108.csv");
 
-            var csvParser = new CsvParser<CsvRecordLigne>(csvParserOptions, new CsvRecordLigneMapping());
-            var records = csvParser.ReadFromFile(@"C:\Users\ismai\Desktop\FluxGestion\Fluuux\PRDG_ADS_SANTE_210108.csv", Encoding.UTF8).ToList();
+            //Executer le traitement de verification 
 
-            //constitue la liste des Flux du fichier
-            var listeCommandes = new List<CreWithSSA>();
-            foreach (var record in records)
-            {
-                if (record.Result.SEG.ToUpper() == "SSA")
-                {
-                    continue;
-                }
-
-                var creWithSsa = new CreWithSSA()
-                {
-                    cre = Mapper.Map<Cre>(record),
-                    ListSSA=records.Where(r=>r.Result.SEG.ToUpper()== "SSA" && r.Result.Col26 == record.Result.NUM_SEG)
-                    .Select(r=> Mapper.Map<Ssa>(r.Result)).ToList()
-                };
-                listeCommandes.Add(creWithSsa);
-            }
-          
+            //Stocage Output
 
             Console.WriteLine("Hello World!");
         }
 
-        static void InitializeAutomapper()
+        private static List<CreWithSSA> GetCommandsFromFile(string filePath)
         {
-            Mapper.Initialize(config =>
+            try
             {
-                config.CreateMap<CsvRecordLigne, Cre>()
-                    .ForMember(dest => dest.TYPE_GR_RSQ, opt => opt.MapFrom(src => src.Col26))
-                    .ForMember(dest => dest.TYPE_RSQ, opt => opt.MapFrom(src => src.Col27))
-                    .ForMember(dest => dest.NAT_PREST, opt => opt.MapFrom(src => src.Col28))
-                    .ForMember(dest => dest.MNT, opt => opt.MapFrom(src => src.Col29));
+                //recuperation du fichier sans header avec separateur ";"
+                CsvParserOptions csvParserOptions = new CsvParserOptions(false, ';');
 
-                config.CreateMap<CsvRecordLigne, Ssa>()
-                    .ForMember(dest => dest.SEG_SSA, opt => opt.MapFrom(src => src.Col26))
-                    .ForMember(dest => dest.TYPE_GR_RSQ, opt => opt.MapFrom(src => src.Col27))
-                    .ForMember(dest => dest.TYPE_RSQ, opt => opt.MapFrom(src => src.Col28))
-                    .ForMember(dest => dest.NAT_PREST, opt => opt.MapFrom(src => src.Col29));
-            });
+                var csvParser = new CsvParser<CsvRecordLigne>(csvParserOptions, new CsvRecordLigneMapping());
+                var records = csvParser.ReadFromFile(filePath, Encoding.UTF8).ToList();
+
+                //constitue la liste des Flux du fichier
+                var listeCommandes = new List<CreWithSSA>();
+                foreach (var record in records)
+                {
+                    if (record.Result.SEG.ToUpper() == "SSA")
+                    {
+                        continue;
+                    }
+
+                    var creWithSsa = new CreWithSSA()
+                    {
+                        cre = Mapper.Map<Cre>(record.Result),
+                        ListSSA = records.Where(r => r.Result.SEG.ToUpper() == "SSA" && r.Result.Col26 == record.Result.NUM_SEG)
+                        .Select(r => Mapper.Map<Ssa>(r.Result)).ToList()
+                    };
+                    listeCommandes.Add(creWithSsa);
+                }
+                return listeCommandes;
+            }
+            catch
+            {
+                return new List<CreWithSSA>();
+            }
         }
     }
 }

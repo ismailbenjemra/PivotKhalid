@@ -6,7 +6,6 @@ namespace Gestion_de_Flux
 {
     public class CsvRecordLigne
     {
-
         public string SEG { get; set; }
         public string NUM_SEG { get; set; }
         public string NUM_FICH_BRIDGE { get; set; }

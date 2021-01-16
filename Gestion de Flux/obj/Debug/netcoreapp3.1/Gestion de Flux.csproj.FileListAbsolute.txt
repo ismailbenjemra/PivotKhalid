@@ -15,3 +15,20 @@ C:\Users\ismai\Desktop\FluxGestion\Gestion de Flux\obj\Debug\netcoreapp3.1\Gesti
 C:\Users\ismai\Desktop\FluxGestion\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.pdb
 C:\Users\ismai\Desktop\FluxGestion\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.genruntimeconfig.cache
 C:\Users\ismai\Desktop\FluxGestion\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.csprojAssemblyReference.cache
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\Gestion de Flux.exe
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\Gestion de Flux.deps.json
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\Gestion de Flux.runtimeconfig.json
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\Gestion de Flux.runtimeconfig.dev.json
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\Gestion de Flux.dll
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\Gestion de Flux.pdb
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\CsvHelper.dll
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\bin\Debug\netcoreapp3.1\TinyCsvParser.dll
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.csprojAssemblyReference.cache
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.AssemblyInfoInputs.cache
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.AssemblyInfo.cs
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.csproj.CoreCompileInputs.cache
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.csproj.CopyComplete
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.dll
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.pdb
+C:\Users\Code212\source\repos\Pivot\ismailbenjemra\PivotKhalid\Gestion de Flux\obj\Debug\netcoreapp3.1\Gestion de Flux.genruntimeconfig.cache

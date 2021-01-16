@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ismai\\Desktop\\FluxGestion\\Gestion de Flux\\Gestion de Flux.csproj": {}
+    "C:\\Users\\Code212\\source\\repos\\Pivot\\ismailbenjemra\\PivotKhalid\\Gestion de Flux\\Gestion de Flux.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ismai\\Desktop\\FluxGestion\\Gestion de Flux\\Gestion de Flux.csproj": {
+    "C:\\Users\\Code212\\source\\repos\\Pivot\\ismailbenjemra\\PivotKhalid\\Gestion de Flux\\Gestion de Flux.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ismai\\Desktop\\FluxGestion\\Gestion de Flux\\Gestion de Flux.csproj",
+        "projectUniqueName": "C:\\Users\\Code212\\source\\repos\\Pivot\\ismailbenjemra\\PivotKhalid\\Gestion de Flux\\Gestion de Flux.csproj",
         "projectName": "Gestion de Flux",
-        "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\Gestion de Flux\\Gestion de Flux.csproj",
-        "packagesPath": "C:\\Users\\ismai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\Gestion de Flux\\obj\\",
+        "projectPath": "C:\\Users\\Code212\\source\\repos\\Pivot\\ismailbenjemra\\PivotKhalid\\Gestion de Flux\\Gestion de Flux.csproj",
+        "packagesPath": "C:\\Users\\Code212\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Code212\\source\\repos\\Pivot\\ismailbenjemra\\PivotKhalid\\Gestion de Flux\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ismai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Code212\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -66,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
