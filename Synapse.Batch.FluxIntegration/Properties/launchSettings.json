@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Synapse.Batch.FluxIntegration": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

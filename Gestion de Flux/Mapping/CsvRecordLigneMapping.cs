@@ -34,13 +34,10 @@ namespace Gestion_de_Flux.Mapping
             MapProperty(22, x => x.LIB_CNT);
             MapProperty(23, x => x.ADDR_SOUS);
             MapProperty(24, x => x.EXR_SURV);
-
-
             MapProperty(25, x => x.Col26);
             MapProperty(26, x => x.Col27);
             MapProperty(27, x => x.Col28);
             MapProperty(28, x => x.Col29);
-
             MapProperty(29, x => x.CD_RSQ);
             MapProperty(30, x => x.NATEVT);
             MapProperty(31, x => x.CD_EVT);
