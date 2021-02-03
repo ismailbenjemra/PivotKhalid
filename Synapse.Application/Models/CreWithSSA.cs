@@ -7,7 +7,7 @@ namespace Synapse.Application.Models
 {
     public class CreWithSSA
     {
-        public Cre cre { get; set; }
-        public List<Ssa> ListSSA { get; set; }
+        public CreAds cre { get; set; }
+        public List<SsaAds> ListSSA { get; set; }
     }
 }

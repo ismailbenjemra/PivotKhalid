@@ -8,8 +8,8 @@ C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\bin\Debug\
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.csprojAssemblyReference.cache
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.AssemblyInfo.cs
+C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.csproj.CopyComplete
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.dll
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.pdb
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.genruntimeconfig.cache
-C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Infrastructure\obj\Debug\netcoreapp3.1\Synapse.Infrastructure.csproj.CoreCompileInputs.cache

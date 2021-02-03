@@ -50,6 +50,7 @@ namespace Synapse.Application.Models
         public string CD_PREST { get; set; }
         public string NB_ACTE { get; set; }
         public string CD_DVS { get; set; }
+        // revoir
         public string MT_FRA_REEL { get; set; }
         public string MT_PREST_DG { get; set; }
         public string MT_RMB_SS { get; set; }

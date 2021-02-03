@@ -4,6 +4,72 @@
     "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Batch.IntegrationFlux\\Synapse.Batch.IntegrationFlux.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Application\\Synapse.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Application\\Synapse.Application.csproj",
+        "projectName": "Synapse.Application",
+        "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Application\\Synapse.Application.csproj",
+        "packagesPath": "C:\\Users\\ismai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ismai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Infrastructure\\Synapse.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Infrastructure\\Synapse.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "TinyCsvParser": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Batch.IntegrationFlux\\Synapse.Batch.IntegrationFlux.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +78,62 @@
         "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Batch.IntegrationFlux\\Synapse.Batch.IntegrationFlux.csproj",
         "packagesPath": "C:\\Users\\ismai\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Batch.IntegrationFlux\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ismai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Application\\Synapse.Application.csproj": {
+                "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Application\\Synapse.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Domain\\Synapse.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Domain\\Synapse.Domain.csproj",
+        "projectName": "Synapse.Domain",
+        "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Domain\\Synapse.Domain.csproj",
+        "packagesPath": "C:\\Users\\ismai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ismai\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +159,100 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Infrastructure\\Synapse.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Infrastructure\\Synapse.Infrastructure.csproj",
+        "projectName": "Synapse.Infrastructure",
+        "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Infrastructure\\Synapse.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ismai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ismai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Domain\\Synapse.Domain.csproj": {
+                "projectPath": "C:\\Users\\ismai\\Desktop\\FluxGestion\\PivotKhalid\\Synapse.Domain\\Synapse.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "MySql.Data.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

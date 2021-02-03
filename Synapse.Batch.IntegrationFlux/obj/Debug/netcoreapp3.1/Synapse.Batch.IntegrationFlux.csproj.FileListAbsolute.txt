@@ -1,0 +1,4 @@
+C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Batch.IntegrationFlux\obj\Debug\netcoreapp3.1\Synapse.Batch.IntegrationFlux.csprojAssemblyReference.cache
+C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Batch.IntegrationFlux\obj\Debug\netcoreapp3.1\Synapse.Batch.IntegrationFlux.AssemblyInfoInputs.cache
+C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Batch.IntegrationFlux\obj\Debug\netcoreapp3.1\Synapse.Batch.IntegrationFlux.AssemblyInfo.cs
+C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Batch.IntegrationFlux\obj\Debug\netcoreapp3.1\Synapse.Batch.IntegrationFlux.csproj.CoreCompileInputs.cache

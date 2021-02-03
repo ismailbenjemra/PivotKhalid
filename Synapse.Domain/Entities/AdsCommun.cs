@@ -23,7 +23,7 @@ namespace Synapse.Domain.Entities
         public string PER_DEB { get; set; }
         public string PER_FIN { get; set; }
         public string CONV_REF { get; set; }
-        public string MNT_TOT { get; set; } //N(2)
+        public decimal MNT_TOT { get; set; } //N(2)
         public string REF_PR { get; set; }
         public string REF_DG { get; set; }
         public string ID_SOUS { get; set; }

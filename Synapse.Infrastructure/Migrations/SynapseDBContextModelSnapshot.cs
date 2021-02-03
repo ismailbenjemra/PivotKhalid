@@ -15,16 +15,16 @@ namespace Synapse.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.2");
 
-            modelBuilder.Entity("Synapse.Domain.Entities.Cre", b =>
+            modelBuilder.Entity("Synapse.Domain.Entities.CreAds", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<string>("ADDR_SOUS")
                         .HasColumnType("nvarchar(max)");
@@ -41,6 +41,9 @@ namespace Synapse.Infrastructure.Migrations
                     b.Property<string>("EXR_SURV")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("FluxFileId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ID_DG")
                         .HasColumnType("nvarchar(max)");
 
@@ -56,11 +59,11 @@ namespace Synapse.Infrastructure.Migrations
                     b.Property<string>("LIB_CNT")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MNT")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MNT")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("MNT_TOT")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MNT_TOT")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("NAT_PREST")
                         .HasColumnType("nvarchar(max)");
@@ -118,15 +121,103 @@ namespace Synapse.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CreSet");
+                    b.HasIndex("FluxFileId");
+
+                    b.ToTable("CreAds");
                 });
 
-            modelBuilder.Entity("Synapse.Domain.Entities.Histories", b =>
+            modelBuilder.Entity("Synapse.Domain.Entities.CreDcs", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
+
+                    b.Property<string>("ADRESSE")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CONT_DG")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CONT_PR")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("FluxFileId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LIGNE_SEG")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("MT_DEMAND")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("MT_TOT")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("RAIS_SOC_A")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RAIS_SOC_B")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("REF_DES_C")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SIRET_PR")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SIRET_SOUS")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FluxFileId");
+
+                    b.ToTable("CreDcs");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.Etat_Prestation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Libelle_Etat")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Etat_Prestations");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.FluxFile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<byte[]>("File")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ProcessedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FluxFiles");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.History", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("ColonneName")
                         .HasColumnType("nvarchar(max)");
@@ -146,7 +237,7 @@ namespace Synapse.Infrastructure.Migrations
                     b.Property<string>("UpdateBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("Update_Group")
+                    b.Property<Guid>("UpdateGroup")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -154,15 +245,94 @@ namespace Synapse.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HistorySet");
+                    b.ToTable("Histories");
                 });
 
-            modelBuilder.Entity("Synapse.Domain.Entities.Ssa", b =>
+            modelBuilder.Entity("Synapse.Domain.Entities.PrestationCommune", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("CreAdsId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreDcsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EXR_SURV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Etat_PrestationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MOIS_SURV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("MT_PREST_DG")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("PER_DEB")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PER_FIN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("REF_PR")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ReservoirAccapPivotId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreAdsId");
+
+                    b.HasIndex("CreDcsId");
+
+                    b.HasIndex("Etat_PrestationId");
+
+                    b.HasIndex("ReservoirAccapPivotId");
+
+                    b.ToTable("PrestationCommunes");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.ReservoirAccapulco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("DateSaisie")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Etat_PrestationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Matricule_Apporteur_Gest")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Numero_Bordereau")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Numero_Ordre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Etat_PrestationId");
+
+                    b.ToTable("ReservoirAccapulco");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.SsaAds", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("ADDR_SOUS")
                         .HasColumnType("nvarchar(max)");
@@ -233,8 +403,8 @@ namespace Synapse.Infrastructure.Migrations
                     b.Property<string>("LIB_CNT")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MNT_TOT")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MNT_TOT")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("MOIS_SURV")
                         .HasColumnType("nvarchar(max)");
@@ -242,17 +412,17 @@ namespace Synapse.Infrastructure.Migrations
                     b.Property<string>("MT_AKT_MAX")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MT_AUT_RMB")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MT_AUT_RMB")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("MT_FRA_REEL")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MT_FRA_REEL")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("MT_PREST_DG")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MT_PREST_DG")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("MT_RMB_SS")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("MT_RMB_SS")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("NATEVT")
                         .HasColumnType("nvarchar(max)");
@@ -333,14 +503,80 @@ namespace Synapse.Infrastructure.Migrations
 
                     b.HasIndex("CreId");
 
-                    b.ToTable("SsaSet");
+                    b.ToTable("SsaAds");
                 });
 
-            modelBuilder.Entity("Synapse.Domain.Entities.Ssa", b =>
+            modelBuilder.Entity("Synapse.Domain.Entities.CreAds", b =>
                 {
-                    b.HasOne("Synapse.Domain.Entities.Cre", "Cre")
+                    b.HasOne("Synapse.Domain.Entities.FluxFile", "FluxFile")
+                        .WithMany()
+                        .HasForeignKey("FluxFileId");
+
+                    b.Navigation("FluxFile");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.CreDcs", b =>
+                {
+                    b.HasOne("Synapse.Domain.Entities.FluxFile", "FluxFile")
+                        .WithMany()
+                        .HasForeignKey("FluxFileId");
+
+                    b.Navigation("FluxFile");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.PrestationCommune", b =>
+                {
+                    b.HasOne("Synapse.Domain.Entities.CreAds", "CreAds")
+                        .WithMany()
+                        .HasForeignKey("CreAdsId");
+
+                    b.HasOne("Synapse.Domain.Entities.CreDcs", "CreDcs")
+                        .WithMany()
+                        .HasForeignKey("CreDcsId");
+
+                    b.HasOne("Synapse.Domain.Entities.Etat_Prestation", "Etat_Prestation")
+                        .WithMany()
+                        .HasForeignKey("Etat_PrestationId");
+
+                    b.HasOne("Synapse.Domain.Entities.ReservoirAccapulco", "ReservoirAccapPivot")
+                        .WithMany("PrestationCommunes")
+                        .HasForeignKey("ReservoirAccapPivotId");
+
+                    b.Navigation("CreAds");
+
+                    b.Navigation("CreDcs");
+
+                    b.Navigation("Etat_Prestation");
+
+                    b.Navigation("ReservoirAccapPivot");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.ReservoirAccapulco", b =>
+                {
+                    b.HasOne("Synapse.Domain.Entities.Etat_Prestation", "Etat_Prestation")
+                        .WithMany()
+                        .HasForeignKey("Etat_PrestationId");
+
+                    b.Navigation("Etat_Prestation");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.SsaAds", b =>
+                {
+                    b.HasOne("Synapse.Domain.Entities.CreAds", "Cre")
                         .WithMany("ListSsa")
                         .HasForeignKey("CreId");
+
+                    b.Navigation("Cre");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.CreAds", b =>
+                {
+                    b.Navigation("ListSsa");
+                });
+
+            modelBuilder.Entity("Synapse.Domain.Entities.ReservoirAccapulco", b =>
+                {
+                    b.Navigation("PrestationCommunes");
                 });
 #pragma warning restore 612, 618
         }

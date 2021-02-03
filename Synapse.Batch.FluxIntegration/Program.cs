@@ -26,9 +26,6 @@ namespace Synapse.Batch.FluxIntegration
                 {
                     services.AddHostedService<Worker>();
                     AppDependenciesRegistration.RegisterAll(services);
-                    
-
-
                 });
     }
 }

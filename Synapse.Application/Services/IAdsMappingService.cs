@@ -10,8 +10,12 @@ namespace Synapse.Application.Services
     public interface IAdsMappingService
     {
        
-        List<Cre> GetCommandsFromFile(string filePath);
+        List<CreAds> GetCommandsFromFile(string filePath);
 
-        Task<int> InsertCreInDb(IEnumerable<Cre> listeCreAds, CancellationToken cancellationToken = default);
+        Task<int> InsertCreInDb(IEnumerable<CreAds> listeCreAds, CancellationToken cancellationToken = default);
+
+        Task<int> InsertFileInDb(FluxFile fluxFile, CancellationToken cancellationToken = default);
+
+        
     }
 }

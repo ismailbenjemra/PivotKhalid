@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synapse.Domain", "..\Synaps
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synapse.Application", "..\Synapse.Application\Synapse.Application.csproj", "{A70F0003-79B0-4BC9-A72A-193183CF9776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synapse.Batch.FluxIntegration", "..\Synapse.Batch.FluxIntegration\Synapse.Batch.FluxIntegration.csproj", "{8D1ADFD4-2989-445C-8B16-7CEBA4767E75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synapse.Batch.FluxIntegration", "..\Synapse.Batch.FluxIntegration\Synapse.Batch.FluxIntegration.csproj", "{8D1ADFD4-2989-445C-8B16-7CEBA4767E75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dotnet-Synapse.Batch.FluxIntegration-BAF1AD08-E56E-47C4-8668-381E20438817")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Synapse.Batch.FluxIntegration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

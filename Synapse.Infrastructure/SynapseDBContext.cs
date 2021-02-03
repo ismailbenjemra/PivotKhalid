@@ -13,13 +13,22 @@ namespace Synapse.Infrastructure
         {
         }
 
-        public DbSet<Cre> CreSet { get; set; }
-        public DbSet<Ssa> SsaSet { get; set; }
-        public DbSet<Histories> HistorySet { get; set; }
+        public DbSet<CreAds> CreAds { get; set; }
+        public DbSet<SsaAds> SsaAds { get; set; }
+        public DbSet<History> Histories { get; set; }
+        public DbSet<PrestationCommune> PrestationCommunes { get; set; }
+
+        public DbSet<CreDcs> CreDcs { get; set; }
+
+        public DbSet<ReservoirAccapulco> ReservoirAccapulco { get; set; }
+        public DbSet<FluxFile> FluxFiles { get; set; }
+
+        public DbSet<Etat_Prestation> Etat_Prestations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-OE8AEG7\SQLEXPRESS;Initial Catalog=SynapseDb;Integrated Security=True");
+            //optionsBuilder.UseMySQL(@"Data Source=DESKTOP-OE8AEG7\SQLEXPRESS;Initial Catalog=SynapseDb;Integrated Security=True");
         }
     }
 }

@@ -11,9 +11,6 @@ namespace Synapse.Infrastructure.Repositories
 
         Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default);
         Task<int> SaveAsync(CancellationToken cancellationToken = default);
-
-
-
-
+        Task AddAsync(FluxFile fluxFile, CancellationToken cancellationToken);
     }
 }
