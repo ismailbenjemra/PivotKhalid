@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,21 +25,32 @@ namespace Synapse.Batch.FluxIntegration
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
-            {
+            
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
                 using (var scope = _service.CreateScope())
                 {
-                    var _adsMappingService= scope.ServiceProvider.GetRequiredService<IAdsMappingService>();
-                    var listAdsPrestations = _adsMappingService.GetCommandsFromFile(@"C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Fluuux\PRDG_ADS_SANTE_210108.csv");
-                    int affectedLignes=await _adsMappingService.InsertCreInDb(listAdsPrestations);
+                // Création du chronomètre.
+                Stopwatch stopwatch = new Stopwatch();
 
-                }
-                   
+                // Démarrage du chronomètre.
+                stopwatch.Start();
+                var _adsMappingService = scope.ServiceProvider.GetRequiredService<IAdsMappingService>();
+                var listAdsPrestations = _adsMappingService.GetCommandsFromFile(@"C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Fluuux\PRDG_ADS_SANTE_210108.csv");
+                int affectedLignes = await _adsMappingService.InsertCreInDb(listAdsPrestations);
+               // await _adsMappingService.InsertCreInDeAsync(listAdsPrestations);
                 
-                await Task.Delay(1000, stoppingToken);
+
+                // Arrêt du chronomètre.
+                stopwatch.Stop();
+                Console.WriteLine("Durée d'exécution: {0}", stopwatch.Elapsed.TotalSeconds);
+
+
+                // IHM.
+
+
             }
+
         }
     }
 }

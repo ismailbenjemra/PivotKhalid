@@ -27,8 +27,14 @@ namespace Synapse.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-OE8AEG7\SQLEXPRESS;Initial Catalog=SynapseDb;Integrated Security=True");
-            //optionsBuilder.UseMySQL(@"Data Source=DESKTOP-OE8AEG7\SQLEXPRESS;Initial Catalog=SynapseDb;Integrated Security=True");
+            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-OE8AEG7\SQLEXPRESS;Initial Catalog=SynapseDb;Integrated Security=True");
+
+
+            string connStr = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=host.docker.internal)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)));Persist Security Info=True;User ID=system;Password=Rani@2020";
+            optionsBuilder.UseOracle(connStr);
+                //.EnableSensitiveDataLogging();
+
+            //optionsBuilder.UseOracle(@"Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = host.docker.internal)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = XE)));User Id=system;Password=Rani@2020)");
         }
     }
 }

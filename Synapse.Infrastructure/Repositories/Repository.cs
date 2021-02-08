@@ -1,4 +1,6 @@
 ﻿
+using EFCoreBulk;
+using EntityFramework.Utilities;
 using Synapse.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace Synapse.Infrastructure.Repositories
 {
@@ -27,14 +30,19 @@ namespace Synapse.Infrastructure.Repositories
 
         public async Task<int> SaveAsync(CancellationToken cancellationToken = default)
         {
-            return await context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+            this.context.ChangeTracker.AutoDetectChangesEnabled = false;
+            return await this.context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
         }
 
         public async Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
         {
+        
             await context.Set<T>().AddRangeAsync(entities, cancellationToken).ConfigureAwait(false);
+        }
 
-            
+        public Task AddAsync(FluxFile fluxFile, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
         }
     }
 }

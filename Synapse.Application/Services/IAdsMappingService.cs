@@ -16,6 +16,10 @@ namespace Synapse.Application.Services
 
         Task<int> InsertFileInDb(FluxFile fluxFile, CancellationToken cancellationToken = default);
 
-        
+
+        Task InsertCreInDeAsync(IEnumerable<CreAds> listeCreAds, CancellationToken cancellationToken = default);
+
+
+
     }
 }

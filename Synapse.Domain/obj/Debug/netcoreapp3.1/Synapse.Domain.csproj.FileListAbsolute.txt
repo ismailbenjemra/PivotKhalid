@@ -1,9 +1,9 @@
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\bin\Debug\netcoreapp3.1\Synapse.Domain.deps.json
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\bin\Debug\netcoreapp3.1\Synapse.Domain.dll
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\bin\Debug\netcoreapp3.1\Synapse.Domain.pdb
+C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.csprojAssemblyReference.cache
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.AssemblyInfoInputs.cache
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.AssemblyInfo.cs
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.csproj.CoreCompileInputs.cache
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.dll
 C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.pdb
-C:\Users\ismai\Desktop\FluxGestion\PivotKhalid\Synapse.Domain\obj\Debug\netcoreapp3.1\Synapse.Domain.csprojAssemblyReference.cache

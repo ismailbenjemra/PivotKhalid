@@ -1,7 +1,5 @@
 ﻿
 using Microsoft.Extensions.Logging;
-using Synapse.Application;
-using Synapse.Domain;
 using Synapse.Infrastructure.Repositories;
 using Synapse.Application.Models;
 using System;
@@ -19,11 +17,11 @@ namespace Synapse.Application.Services
 {
     public class AdsMappingService : IAdsMappingService
     {
-       
+
         private readonly ILogger<AdsMappingService> _logger;
         private readonly IRepository<CreAds> _creRepository;
 
-       public AdsMappingService(ILogger<AdsMappingService> logger, IRepository<CreAds> creRepository)
+        public AdsMappingService(ILogger<AdsMappingService> logger, IRepository<CreAds> creRepository)
         {
             _logger = logger;
             _creRepository = creRepository;
@@ -54,24 +52,49 @@ namespace Synapse.Application.Services
                 }
                 return listeCommandes;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.Message.ToString());
                 return new List<CreAds>();
             }
         }
 
+        /*
+          
+         
+         */
 
 
-        public async Task<int> InsertCreInDb(IEnumerable<CreAds> listeCreAds,CancellationToken cancellationToken =default)
+        public async Task<int> InsertCreInDb(IEnumerable<CreAds> listeCreAds, CancellationToken cancellationToken = default)
         {
+          
             await _creRepository.AddRangeAsync(listeCreAds, cancellationToken);
             return await _creRepository.SaveAsync();
+        }
+
+        public async Task InsertCreInDeAsync(IEnumerable<CreAds> listeCreAds, CancellationToken cancellationToken = default)
+        {
+
+            var listCount = listeCreAds.Count();
+            var step = 550;
+            for (int i = 0; i < listCount; i += step)
+            {
+                var newlist = listeCreAds.Skip(i).Take(step);
+                await _creRepository.AddRangeAsync(newlist);
+                await _creRepository.SaveAsync();
+
+
+            }
+
+
         }
 
 
         public async Task<int> InsertFileInDb(FluxFile fluxFile, CancellationToken cancellationToken = default)
         {
+
+
+
             await _creRepository.AddAsync(fluxFile, cancellationToken);
             return await _creRepository.SaveAsync();
         }
